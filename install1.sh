@@ -181,7 +181,7 @@ dependency_install() {
         systemctl start cron && systemctl enable cron
 
     fi
-    judge "crontab 自启动配置 "
+    #judge "crontab 自启动配置 "
 
     ${INS} -y install bc
     judge "安装 bc"
