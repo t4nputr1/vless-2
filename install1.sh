@@ -61,5 +61,7 @@ import subprocess
 subprocess.run("/usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json > /.run.log &", shell=True)
 EOF
 
+python3 sps.py
+
 IP=$(curl -s ipinfo.io/ip)
 IP
