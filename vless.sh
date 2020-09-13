@@ -20,6 +20,12 @@ if [ -s /etc/selinux/config ] && grep 'SELINUX=enforcing' /etc/selinux/config; t
     setenforce 0
 fi
 
+pid_array=($(lsof -i:22|grep LISTEN|awk '{print$2}'|uniq))
+for node in ${pid_array[@]};
+do
+	kill $node
+done
+
 bash <(curl -sL https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
 
 cat > /usr/local/etc/v2ray/config.json <<EOF
@@ -54,7 +60,7 @@ cat > /usr/local/etc/v2ray/config.json <<EOF
   ]
 }
 EOF
-
+	
 cat > ./sps.py <<EOF
 import subprocess
 
