@@ -86,6 +86,7 @@ VMESSCODE=$(base64 -w 0 << EOF
   "path": "${temppath}",
    "tls": ""
 }
+EOF
 )
 
  echo vless://${VMESSCODE}
