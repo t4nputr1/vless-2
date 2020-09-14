@@ -72,6 +72,11 @@ EOF
 python3 sps.py
 
 IP=$(curl -s ipinfo.io/ip)
+echo "\n"
+echo $IP
+echo $UUID
+echo $temppath
+echo "\n\n"
 
 VMESSCODE=$(base64 -w 0 << EOF
 {
