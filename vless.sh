@@ -46,6 +46,7 @@ cat > /usr/local/etc/v2ray/config.json <<EOF
       },
       "streamSettings": {
         "network": "ws",
+	"security": "tls",
         "wsSettings": {
         "path": "/5e60be4f39c63c/"
         }
