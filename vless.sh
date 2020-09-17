@@ -71,4 +71,4 @@ EOF
 python3 sps.py
 
 IP=$(curl -s ipinfo.io/ip)
-IP
+echo IP
